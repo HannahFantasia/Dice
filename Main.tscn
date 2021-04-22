@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Add Dice" type="Button" parent="."]
+margin_left = 327.867
+margin_top = 580.027
+margin_right = 391.867
+margin_bottom = 606.027
+custom_fonts/font = SubResource( 1 )
+text = "+ Dice"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Remove Dice" type="Button" parent="."]
+margin_left = 327.844
+margin_top = 607.788
+margin_right = 391.844
+margin_bottom = 633.788
+custom_fonts/font = SubResource( 1 )
+text = "- Dice"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roll All" type="Button" parent="."]
+margin_left = 408.574
+margin_top = 580.294
+margin_right = 476.574
+margin_bottom = 606.294
+custom_fonts/font = SubResource( 1 )
+text = "Roll All"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear All" type="Button" parent="."]
+margin_left = 398.931
+margin_top = 608.302
+margin_right = 479.931
+margin_bottom = 634.302
+custom_fonts/font = SubResource( 1 )
+text = "Clear All"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sum All" type="Button" parent="."]
+margin_left = 4.12318
+margin_top = 577.011
+margin_right = 85.1232
+margin_bottom = 603.011
+rect_scale = Vector2( 0.996903, 1.07588 )
+custom_fonts/font = SubResource( 1 )
+text = "Sum all"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sum Total" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 611.0
+margin_right = 100.0
+margin_bottom = 637.0
+rect_scale = Vector2( 0.996903, 1.07588 )
+custom_fonts/font = SubResource( 1 )
+text = "Sum Total"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grid" type="HBoxContainer" parent="."]
+margin_left = 34.8909
+margin_right = 443.891
+margin_bottom = 571.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sum" type="Label" parent="."]
+margin_left = 105.762
+margin_top = 602.531
+margin_right = 145.762
+margin_bottom = 641.531
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear Sum Total" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 645.0
+margin_right = 100.0
+margin_bottom = 671.0
+custom_fonts/font = SubResource( 1 )
+text = "Clear Sum Total"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear Sum All" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 674.0
+margin_right = 100.0
+margin_bottom = 700.0
+custom_fonts/font = SubResource( 1 )
+text = "Clear Sum All"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Add Dice" to="." method="_on_Add_Dice_pressed"]
+[connection signal="pressed" from="Remove Dice" to="." method="_on_Remove_Dice_pressed"]
+[connection signal="pressed" from="Roll All" to="." method="_on_Roll_All_pressed"]
+[connection signal="pressed" from="Clear All" to="." method="_on_Clear_All_pressed"]
+[connection signal="pressed" from="Sum All" to="." method="_on_Sum_All_pressed"]
+[connection signal="pressed" from="Sum Total" to="." method="_on_Sum_Total_pressed"]
+[connection signal="pressed" from="Clear Sum Total" to="." method="_on_Clear_Sum_Total_pressed"]
+[connection signal="pressed" from="Clear Sum All" to="." method="_on_Clear_Sum_All_pressed"]
